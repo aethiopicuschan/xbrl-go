@@ -69,7 +69,7 @@ xbrl facts sample.xbrl
 .
 ├── example # Example code demonstrating library usage
 ├── cmd
-│   └── xbrl-go # CLI entrypoint
+│   └── xbrl # CLI entrypoint
 └── pkg/
     └── xbrl # Public library code
 ```

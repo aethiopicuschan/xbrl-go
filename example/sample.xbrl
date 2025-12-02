@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl
+    xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ex="http://example.com/taxonomy/example">
+
+  <!-- schemaRef -->
+  <link:schemaRef
+      xlink:type="simple"
+      xlink:href="http://example.com/taxonomy/sample.xsd"/>
+
+  <!-- Context -->
+  <xbrli:context id="FilingDateInstant">
+    <xbrli:entity>
+      <xbrli:identifier scheme="http://example.com/entity">EX-000001</xbrli:identifier>
+    </xbrli:entity>
+    <xbrli:period>
+      <xbrli:instant>2025-11-13</xbrli:instant>
+    </xbrli:period>
+  </xbrli:context>
+
+  <!-- Unit -->
+  <xbrli:unit id="JPY">
+    <xbrli:measure>iso4217:JPY</xbrli:measure>
+  </xbrli:unit>
+
+  <!-- Facts -->
+
+  <!-- TextBlock -->
+  <ex:IndependentAuditorsReportConsolidatedTextBlock
+      contextRef="FilingDateInstant"
+      xml:lang="ja">
+    &lt;p&gt;架空企業の連結財務諸表に対するレビュー報告書&lt;/p&gt;
+    &lt;p&gt;2025年11月13日 架空企業ホールディングス株式会社 取締役会 御中&lt;/p&gt;
+    &lt;p&gt;架空有限責任監査法人&lt;/p&gt;
+  </ex:IndependentAuditorsReportConsolidatedTextBlock>
+
+  <!-- 監査法人名 -->
+  <ex:AuditFirm1Consolidated
+      contextRef="FilingDateInstant"
+      xml:lang="ja">
+    架空有限責任監査法人
+  </ex:AuditFirm1Consolidated>
+
+  <ex:CPA1AuditFirm1Consolidated contextRef="FilingDateInstant" xml:lang="ja">
+    架　　空　　太　　郎
+  </ex:CPA1AuditFirm1Consolidated>
+
+  <ex:CPA2AuditFirm1Consolidated contextRef="FilingDateInstant" xml:lang="ja">
+    株　　式　　株　　子
+  </ex:CPA2AuditFirm1Consolidated>
+
+  <ex:ConsolidatedProfit contextRef="FilingDateInstant" unitRef="JPY" decimals="0">
+    123456789
+  </ex:ConsolidatedProfit>
+
+</xbrli:xbrl>

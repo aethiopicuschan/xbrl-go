@@ -47,6 +47,12 @@ go get github.com/aethiopicuschan/xbrl-go
 go get -u github.com/aethiopicuschan/xbrl-go
 ```
 
+CLI (optional):
+
+```sh
+go install github.com/aethiopicuschan/xbrl-go/cmd/xbrl-go@latest
+```
+
 ## 🧭 Usage (example)
 
 ```go
@@ -80,14 +86,11 @@ xbrl-go extract sample.xbrl --json
 
 ```
 .
-├── cmd/              # CLI entrypoint
-├── internal/         # Private implementation details
-├── pkg/              # Public library code
-│   ├── parser/       # Core parsers
-│   ├── model/        # XBRL data structures
-│   ├── linkbase/     # Linkbase handling
-│   └── xbrl/         # High-level API
-└── tests/            # Conformance / integration tests
+├── example # Example code demonstrating library usage
+├── cmd
+│   └── xbrl-go # CLI entrypoint
+└── pkg/
+    └── xbrl # Public library code
 ```
 
 ## 🤝 Contributing

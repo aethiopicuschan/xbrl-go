@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:ex="http://example.com/taxonomy/example"
+    targetNamespace="http://example.com/taxonomy/example"
+    elementFormDefault="qualified">
+
+  <!-- import XBRL instance schema -->
+  <xs:import
+      namespace="http://www.xbrl.org/2003/instance"
+      schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+
+  <!-- TextBlock -->
+  <xs:element
+      name="IndependentAuditorsReportConsolidatedTextBlock"
+      id="ex_IndependentAuditorsReportConsolidatedTextBlock"
+      substitutionGroup="xbrli:item"
+      type="xbrli:stringItemType"
+      periodType="instant" />
+
+  <xs:element
+      name="AuditFirm1Consolidated"
+      id="ex_AuditFirm1Consolidated"
+      substitutionGroup="xbrli:item"
+      type="xbrli:stringItemType"
+      periodType="instant" />
+
+  <xs:element
+      name="CPA1AuditFirm1Consolidated"
+      id="ex_CPA1AuditFirm1Consolidated"
+      substitutionGroup="xbrli:item"
+      type="xbrli:stringItemType"
+      periodType="instant" />
+
+  <xs:element
+      name="CPA2AuditFirm1Consolidated"
+      id="ex_CPA2AuditFirm1Consolidated"
+      substitutionGroup="xbrli:item"
+      type="xbrli:stringItemType"
+      periodType="instant" />
+
+  <!-- monetary, duration, credit -->
+  <xs:element
+      name="ConsolidatedProfit"
+      id="ex_ConsolidatedProfit"
+      substitutionGroup="xbrli:item"
+      type="xbrli:monetaryItemType"
+      periodType="duration"
+      balance="credit" />
+</xs:schema>

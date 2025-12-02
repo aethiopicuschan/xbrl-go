@@ -11,9 +11,9 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "xbrl-go <instance.xbrl>",
-	Short: "xbrl-go is a CLI for working with XBRL instance documents",
-	Long: `xbrl-go is a CLI tool built on top of the xbrl-go library.
+	Use:   "xbrl <instance.xbrl>",
+	Short: "xbrl is a CLI for working with XBRL instance documents",
+	Long: `xbrl is a CLI tool built on top of the xbrl-go library.
 
 By default it prints a summary of the instance document:
   - number of schemaRefs

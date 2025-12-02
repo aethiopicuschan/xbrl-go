@@ -29,7 +29,7 @@ go get github.com/aethiopicuschan/xbrl-go/pkg/xbrl
 CLI (optional):
 
 ```sh
-go install github.com/aethiopicuschan/xbrl-go/cmd/xbrl-go@latest
+go install github.com/aethiopicuschan/xbrl-go/cmd/xbrl@latest
 ```
 
 ## 🧭 Usage (example)
@@ -55,10 +55,12 @@ func main() {
 }
 ```
 
+And you can see [example](./example) for more detailed usage.
+
 CLI example:
 
 ```sh
-xbrl-go facts sample.xbrl
+xbrl facts sample.xbrl
 ```
 
 ## 🔧 Project structure

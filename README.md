@@ -6,8 +6,6 @@
 [![CI](https://github.com/aethiopicuschan/xbrl-go/actions/workflows/ci.yaml/badge.svg)](https://github.com/aethiopicuschan/xbrl-go/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/aethiopicuschan/xbrl-go/graph/badge.svg?token=6A4Y75PXH5)](https://codecov.io/gh/aethiopicuschan/xbrl-go)
 
-# xbrl-go
-
 `xbrl-go` is a Go library and CLI tool for parsing and working with **XBRL (eXtensible Business Reporting Language)** documents.
 
 Its goals are:

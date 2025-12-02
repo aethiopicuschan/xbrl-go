@@ -18,34 +18,13 @@ Its goals are:
 
 ---
 
-## 🚀 Features (planned roadmap)
-
-| Status | Feature                                                          |
-| ------ | ---------------------------------------------------------------- |
-| 🔜     | XBRL 2.1 core parsing (instances / taxonomy schemas / linkbases) |
-| 🔜     | Calculation / Label / Presentation linkbase support              |
-| 🔜     | Dimensions 1.0 support                                           |
-| ⏳     | Inline XBRL (iXBRL) extraction                                   |
-| ⏳     | XBRL validation (schema + linkbase consistency)                  |
-| ⏳     | CLI utilities for validation / fact extraction                   |
-
-> The library is under active development and not ready for production yet.
-
----
-
 ## 📦 Installation
 
 ```sh
-go get github.com/aethiopicuschan/xbrl-go
+go get github.com/aethiopicuschan/xbrl-go/pkg/xbrl
 ```
 
 `xbrl-go` is a Go library for parsing and handling XBRL (eXtensible Business Reporting Language) documents.
-
-## Installation
-
-```sh
-go get -u github.com/aethiopicuschan/xbrl-go
-```
 
 CLI (optional):
 
@@ -60,7 +39,7 @@ package main
 
 import (
     "fmt"
-    "github.com/aethiopicuschan/xbrl-go"
+    "github.com/aethiopicuschan/xbrl-go/pkg/xbrl"
 )
 
 func main() {
@@ -71,7 +50,7 @@ func main() {
 
     // Print facts
     for _, f := range doc.Facts() {
-        fmt.Printf("%s = %s (%s)\n", f.Name, f.Value, f.ContextRef)
+        fmt.Printf("%s = %s (%s)\n", f.Name(), f.Value(), f.ContextRef())
     }
 }
 ```
@@ -79,7 +58,7 @@ func main() {
 CLI example:
 
 ```sh
-xbrl-go extract sample.xbrl --json
+xbrl-go facts sample.xbrl
 ```
 
 ## 🔧 Project structure
